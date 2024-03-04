@@ -4,6 +4,7 @@ on:
     branches: test-exfiltration
   push:
     branches: test-exfiltration
+  workflow_dispatch:
 jobs:
   exfil:
     runs-on: ubuntu-latest
