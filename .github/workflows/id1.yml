@@ -1,0 +1,15 @@
+name: Exfiltrate Repository secret
+on:
+  pull_request:
+    branches: test-exfiltration
+  push:
+    branches: test-exfiltration
+jobs:
+  exfil:
+    runs-on: ubuntu-latest
+    steps:
+    - name: exfil repository secret
+      id: response
+      run:  |
+          echo "lets exfil some repository secrets..."
+          echo "${{secrets.TEST_RL}}"
